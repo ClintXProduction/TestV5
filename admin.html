@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLTX4 — Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+  <div id="login" class="login-wrap">
+    <div class="login-card">
+      <div class="brand"><span>CLTX4</span><small>ADMIN CONSOLE</small></div>
+      <h1>Welcome back.</h1>
+      <p>Enter the admin password to manage the storefront.</p>
+      <form id="loginForm"><input id="password" type="password" placeholder="Admin password" autocomplete="current-password"><button class="btn primary" type="submit">Unlock panel</button></form>
+      <a href="index.html" class="back">← Back to marketplace</a>
+      <div id="loginError" class="error"></div>
+    </div>
+  </div>
+
+  <div id="dashboard" class="dashboard hidden">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>CLTX4</span><small>ADMIN CONSOLE</small></a>
+      <button id="logout" class="btn ghost">Log out</button>
+    </header>
+    <main class="admin-main">
+      <div class="admin-title"><div><div class="eyebrow">CONTROL CENTER</div><h1>Store management</h1></div><button id="newProduct" class="btn primary">+ Add website</button></div>
+      <div class="stats">
+        <div><span>Live products</span><strong id="statProducts">0</strong></div>
+        <div><span>Catalog value</span><strong id="statValue">₱0</strong></div>
+        <div><span>Available</span><strong id="statAvailable">0</strong></div>
+      </div>
+      <section class="admin-panel">
+        <div class="panel-head"><h2>Products</h2><input id="adminSearch" placeholder="Filter products…"></div>
+        <div id="adminList"></div>
+      </section>
+      <p class="security-note"><b>Security note:</b> this demo stores products and authentication in the browser. GitHub Pages/static hosting cannot keep a password secret. For a real store, move authentication and product data to a server/database before selling anything.</p>
+    </main>
+  </div>
+
+  <dialog id="productDialog">
+    <form method="dialog" id="productForm" class="dialog-card">
+      <div class="dialog-head"><h2 id="dialogTitle">Add website</h2><button value="cancel" class="x">×</button></div>
+      <input type="hidden" id="productId">
+      <label>Name<input id="name" required placeholder="e.g. Nova Portfolio"></label>
+      <label>Category<input id="category" required placeholder="Portfolio / E-commerce / Dashboard"></label>
+      <label>Price (PHP)<input id="price" required type="number" min="0" step="1" placeholder="499"></label>
+      <label>GitHub URL<input id="github" type="url" placeholder="https://github.com/yourname/project"></label>
+      <label>Description<textarea id="description" required placeholder="Short product description"></textarea></label>
+      <label>Availability<select id="available"><option value="true">Available</option><option value="false">Sold out</option></select></label>
+      <div class="dialog-actions"><button type="button" id="deleteProduct" class="btn danger">Delete</button><button value="cancel" class="btn ghost">Cancel</button><button id="saveProduct" value="default" class="btn primary">Save website</button></div>
+    </form>
+  </dialog>
+  <script src="admin.js"></script>
+</body>
+</html>

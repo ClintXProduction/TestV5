@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLTX4 — Digital Website Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>CLTX4</span><small>WEB MARKET</small></a>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#how">How it works</a>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">GITHUB-READY DIGITAL STOREFRONT</div>
+        <h1>Launch a website<br><span>without the boring part.</span></h1>
+        <p>Premium website templates, starter projects, and UI kits built to ship fast. Browse the catalog and grab a project for your next build.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Browse websites</a>
+          <a class="btn ghost" href="admin.html">Open admin panel</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orb"></div>
+        <div class="terminal">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <code><span>$</span> git clone website.git<br><span>✓</span> project ready<br><span>→</span> customize &amp; deploy</code>
+        </div>
+        <div class="stat"><strong id="heroCount">0</strong><small>products live</small></div>
+      </div>
+    </section>
+
+    <section id="products" class="catalog">
+      <div class="section-head">
+        <div><div class="eyebrow">CATALOG</div><h2>Featured websites</h2></div>
+        <div class="tools"><input id="search" placeholder="Search websites…"><select id="sort"><option value="newest">Newest</option><option value="low">Price: low</option><option value="high">Price: high</option></select></div>
+      </div>
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+
+    <section id="how" class="how">
+      <div class="eyebrow">SIMPLE FLOW</div>
+      <h2>Pick. Download. Build.</h2>
+      <div class="steps">
+        <article><b>01</b><h3>Choose a project</h3><p>Find a landing page, dashboard, portfolio, or starter site.</p></article>
+        <article><b>02</b><h3>Get the source</h3><p>Use the product details to access your GitHub-ready project.</p></article>
+        <article><b>03</b><h3>Deploy your way</h3><p>Customize it and publish with GitHub Pages or your own host.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 CLTX4</span><span>Built for creators who ship.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
